@@ -14,10 +14,16 @@ function User_Hero() {
       });
   }, []);
 
-  console.log(data);
+  console.log("user info: ", data);
   return (
     <div>
-      <div className="container mx-auto px-4">User_Hero</div>
+      <div className="container mx-auto px-4">
+        {data && (
+          <>
+            <div>{data.response.name}</div>
+          </>
+        )}
+      </div>
     </div>
   );
 }

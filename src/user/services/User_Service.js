@@ -11,7 +11,7 @@ const getAllProduct = async () => {
       }
     );
     const response_1 = await response.json();
-    return response_1.results;
+    return response_1;
   } catch (err) {
     return console.error(err);
   }
@@ -30,15 +30,36 @@ const getUserInfo = async () => {
             }
         )
         const response_1 = await response.json()
-        return response_1.results
+        return response_1
+    } catch (error) {
+        console.error(error)
+    }
+}
+const getProductDetails = async (param) => {
+    try {
+        const response = await fetch(
+            `https://belaundry-api.sebaris.link/platform/product/${param}`,
+            {
+                method: "GET",
+                headers: {
+                    token:
+                    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoxLCJpYXQiOjE2OTAzNTc4Mzd9.ILF698ktm1Zw_ssLXsmCAMAGEz3_LIVA3_XWXcHWK0k"
+                }
+            }
+        )
+        const response_1 = await response.json()
+        return response_1
     } catch (error) {
         console.error(error)
     }
 }
 
+
+
 const get = {
   getAllProduct,
-  getUserInfo
+  getUserInfo,
+  getProductDetails
 };
 
 const post = {

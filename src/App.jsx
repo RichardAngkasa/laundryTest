@@ -5,6 +5,7 @@ import Admin_Home from "./admin/pages/Admin_Home";
 import Admin_Layout from "./admin/components/organisme/Admin_Layout";
 import User_Layout from "./user/components/organisme/User_Layout";
 import User_Home from "./user/pages/User_Home";
+import User_ProductDetails from "./user/pages/User_ProductDetails";
 
 const adminRoute = () => (
   <>
@@ -14,6 +15,7 @@ const adminRoute = () => (
 const userRoute = () => (
   <>
     <Route path="/user/home" element={<User_Home />} />
+    <Route path="/user/product/:id" element={<User_ProductDetails />} />
   </>
 );
 
