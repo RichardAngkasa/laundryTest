@@ -15,7 +15,6 @@ function User_Products() {
       });
   }, []);
 
-  console.log("products: ", data?.response);
   return (
     <div className="overflow-scroll">
       <div className="flex gap-4">

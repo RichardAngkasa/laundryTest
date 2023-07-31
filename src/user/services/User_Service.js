@@ -35,6 +35,7 @@ const getUserInfo = async () => {
         console.error(error)
     }
 }
+
 const getProductDetails = async (param) => {
     try {
         const response = await fetch(

@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
 function User_ProductCard({ data }) {
-  console.log(data);
   const navigate = useNavigate()
   return (
     <div className="border border-black p-4">

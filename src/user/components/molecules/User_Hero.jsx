@@ -14,7 +14,6 @@ function User_Hero() {
       });
   }, []);
 
-  console.log("user info: ", data);
   return (
     <div>
       <div className="container mx-auto px-4">
